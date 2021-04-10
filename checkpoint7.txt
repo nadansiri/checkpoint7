@@ -1,0 +1,220 @@
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Desktop/GoMyCode/Checkpoint7 learn_git_again/.git/
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git add third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) a2e7693] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git log
+commit a2e769386963603fb0455afa0531668168356992 (HEAD -> master)
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:22:46 2021 +0100
+
+    adding third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fourth.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git add fourth.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 88f3da3] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git log
+commit 88f3da3aa110d50e1deb00720a4ffc953a415507 (HEAD -> master)
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:25:20 2021 +0100
+
+    adding fourth.txt
+
+commit a2e769386963603fb0455afa0531668168356992
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:22:46 2021 +0100
+
+    adding third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 8e49deb] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git log
+commit 8e49deb49005965246ab3595e6c5204ab93cdc37 (HEAD -> master)
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:27:23 2021 +0100
+
+    removing third.txt
+
+commit 88f3da3aa110d50e1deb00720a4ffc953a415507
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:25:20 2021 +0100
+
+    adding fourth.txt
+
+commit a2e769386963603fb0455afa0531668168356992
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:22:46 2021 +0100
+
+    adding third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git config --global core.pager cat
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git log
+commit 8e49deb49005965246ab3595e6c5204ab93cdc37 (HEAD -> master)
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:27:23 2021 +0100
+
+    removing third.txt
+
+commit 88f3da3aa110d50e1deb00720a4ffc953a415507
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:25:20 2021 +0100
+
+    adding fourth.txt
+
+commit a2e769386963603fb0455afa0531668168356992
+Author: nadansiri <nada19nsiri@gmail.com>
+Date:   Sun Apr 11 00:22:46 2021 +0100
+
+    adding third.txt
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=nadansiri
+user.email=nada19nsiri@gmail.com
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git remote add origin https://github.com/nadansiri/checkpoint7
+
+NdNs@NdNs MINGW64 ~/Desktop/GoMyCode/Checkpoint7 learn_git_again (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 628 bytes | 104.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/nadansiri/checkpoint7/pull/new/master
+remote:
+To https://github.com/nadansiri/checkpoint7
+ * [new branch]      master -> master
+
